@@ -60,13 +60,12 @@ class mensaplan:
             return "No Data Available"
 
     def keys(self, type):    
-        mensen = { "adenauerring":  ["l1", "l2", "l3", "l45", "schnitzelbar", "update", "abend", "aktion", "heisstheke", "nmtisch"],
-                      "erzberger":     ["wahl1", "wahl2"],
-                      "gottesaue":     ["wahl1", "wahl2"],
-                      "holzgarten":    ["gut","gut2"],
-                      "moltke":        ["wahl1", "wahl2", "aktion", "gut", "buffet", "schnitzelbar"],
-                      "tiefenbronner": ["wahl1", "wahl2", "gut", "buffet"]
-                    }
+        mensen = {"adenauerring":  ["l1", "l2", "l3", "l45", "schnitzelbar", "update", "abend", "aktion", "heisstheke", "nmtisch"],
+                  "erzberger":     ["wahl1", "wahl2"],
+                  "gottesaue":     ["wahl1", "wahl2"],
+                  "holzgarten":    ["gut","gut2"],
+                  "moltke":        ["wahl1", "wahl2", "aktion", "gut", "buffet", "schnitzelbar"],
+                  "tiefenbronner": ["wahl1", "wahl2", "gut", "buffet"]}
         meals = ["add", "bio", "cow", "cow_aw", "dish", "fish", "info", "meal", "pork", "price_1", "price_2", "price_3", "price_4", "price_flag", "veg", "vegan"]
         if type == "mensa":
             return mensen.keys()
