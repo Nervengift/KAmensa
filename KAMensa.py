@@ -83,51 +83,27 @@ class mensaplan:
 
     ## Mapping keys to Names
 def key_to_name(key):
-    if key == "adenauerring":
-        return "Mensa am Adenauerring"
-    elif key == "erzberger":
-        return "Mensa Erzbergstraße"
-    elif key == "gottesaue":
-        return "Mensa Schloss Gottesaue"
-    elif key == "holzgarten":
-        return "Mensa Holzgartenstraße"
-    elif key == "moltke":
-        return "Mensa Moltke"
-    elif key == "tiefenbronner":
-        return "Mensa Tiefenbronner Straße"
-    elif key == "l1":
-        return "Linie 1"
-    elif key == "l2": 
-        return "Linie 2"
-    elif key == "l3": 
-        return "Linie 3"
-    elif key == "l45": 
-        return "Linie 4/5"
-    elif key == "schnitzelbar": 
-        return "Schnitzelbar"
-    elif key == "update": 
-        return "L6 Update"
-    elif key == "abend": 
-        return "Abend"
-    elif key == "aktion": 
-        return "Aktionstheke"
-    elif key == "heisstheke": 
-        return "Cafeteria Heiße Theke"
-    elif key == "nmtisch": 
-        return "Cafeteria ab 14:30"
-    elif key == "wahl1": 
-        return "Wahlessen 1"
-    elif key == "wahl2": 
-        return "Wahlessen 2"
-    elif key == "aktion": 
-        return "Aktionstheke"
-    elif key == "gut": 
-        return "Gut&Guenstig"
-    elif key == "gut2": 
-        return "Gut&Guenstig 2"
-    elif key == "buffet": 
-        return "Buffet"
-    elif key == "schnitzelbar":
-        return "Schnitzelbar"
-    else:
-        return "unknown key"
+    name = {"adenauerring":"Mensa am Adenauerring",
+            "erzberger":"Mensa Erzbergstraße",
+            "gottesaue":"Mensa Schloss Gottesaue",
+            "holzgarten":"Mensa Holzgartenstraße",
+            "moltke":"Mensa Moltke",
+            "tiefenbronner":"Mensa Tiefenbronner Straße",
+            "l1":"Linie 1",
+            "l2":"Linie 2",
+            "l3":"Linie 3",
+            "l45":"Linie 4/5",
+            "schnitzelbar":"Schnitzelbar",
+            "update":"L6 Update",
+            "abend":"Abend",
+            "aktion":"Aktionstheke",
+            "heisstheke":"Cafeteria Heiße Theke",
+            "nmtisch":"Cafeteria ab 14:30",
+            "wahl1":"Wahlessen 1",
+            "wahl2":"Wahlessen 2",
+            "aktion":"Aktionstheke",
+            "gut":"Gut&Guenstig",
+            "gut2":"Gut&Guenstig 2",
+            "buffet":"Buffet",
+            "schnitzelbar":"Schnitzelbar"}.get(key, "unknown key")
+    return name
