@@ -6,9 +6,9 @@ import datetime
 ## On weekends, print plan for monday
 date = datetime.date.today();
 if date.weekday() == 5 :
-    date += datetime.timedelta(2)
+	date += datetime.timedelta(2)
 elif date.weekday() == 6:
-    date += datetime.timedelta(1)
+	date += datetime.timedelta(1)
 
 plan = KAMensa.mensaplan()
 
@@ -22,7 +22,6 @@ for line in plan.keys('adenauerring'):
 			# Linie
 			print('\n' + str(KAMensa.key_to_name(line)) + ':')
 			for item in meal:
-				print(item.keys())
 				if 'closing_start' not in item.keys():
 					if 'nodata' not in item.keys():
 						print('|-'+ item['meal'] + ' ' + item['dish'] + ' ' + str(item['price_1']) + u'€ ' + item['info'])
@@ -31,6 +30,6 @@ for line in plan.keys('adenauerring'):
 				else:
 					close_start = datetime.datetime.fromtimestamp(int(item['closing_start'])).strftime('%d. %m. %Y')
 					close_end   = datetime.datetime.fromtimestamp(int(item['closing_end'])).strftime('%d. %m. %Y')
-					print("|- Closed from {} to {}".format(close_start,close_end))
+					print("|- Closed from %s to %s" % (close_start,close_end))
 	else:
 			print('No Data')
