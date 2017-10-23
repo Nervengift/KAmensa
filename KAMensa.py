@@ -11,7 +11,7 @@ class mensaplan:
     def __init__(self):
         username = "jsonapi"
         password = "AhVai6OoCh3Quoo6ji"
-        theurl = "https://www.studentenwerk-karlsruhe.de/json_interface/canteen/"
+        theurl = "https://www.sw-ka.de/json_interface/canteen/"
 
         req = urllib.request.Request(theurl)
         userstring = "%s:%s" % (username, password)
