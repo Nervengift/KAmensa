@@ -12,12 +12,12 @@ elif date.weekday() == 6:
 
 plan = KAMensa.mensaplan()
 
-header = KAMensa.key_to_name('moltke') + " " + str(date)
+header = KAMensa.key_to_name('adenauerring') + " " + str(date)
 
 print('*'*len(header) +'\n' + header + '\n' + '*'*len(header))
 
-for line in plan.keys('moltke'):
-    meal = plan.meal('moltke',line,date)
+for line in plan.keys('adenauerring'):
+    meal = plan.meal('adenauerring',line,date)
     if meal != None :
             # Linie
             print('\n' + str(KAMensa.key_to_name(line)) + ':')
