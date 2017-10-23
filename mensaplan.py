@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import KAMensa
 import datetime
+import sys
 
 ## On weekends, print plan for monday
 date = datetime.date.today();
@@ -12,12 +13,21 @@ elif date.weekday() == 6:
 
 plan = KAMensa.mensaplan()
 
-header = KAMensa.key_to_name('adenauerring') + " " + str(date)
+mensa_keys = list(plan.keys('mensa'))
+mensa = 'adenauerring'
+if len(sys.argv) >= 2:
+    if sys.argv[1] in mensa_keys:
+        mensa = sys.argv[1]
+    else:
+        print("Usage: mensaplan.py ({})".format("|".join(mensa_keys)))
+        sys.exit(1)
+
+header = KAMensa.key_to_name(mensa) + " " + str(date)
 
 print('*'*len(header) +'\n' + header + '\n' + '*'*len(header))
 
-for line in plan.keys('adenauerring'):
-	meal = plan.meal('adenauerring',line,date)
+for line in plan.keys(mensa):
+	meal = plan.meal(mensa, line,date)
 	if meal != None :
 			# Linie
 			print('\n' + str(KAMensa.key_to_name(line)) + ':')
