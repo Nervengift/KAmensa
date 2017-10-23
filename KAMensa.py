@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#!/usr/bin/python2ö
+#!/usr/bin/python3
 # coding: utf8
 import urllib.request
 import base64
