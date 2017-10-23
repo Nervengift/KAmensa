@@ -22,7 +22,6 @@ for line in plan.keys('adenauerring'):
 			# Linie
 			print('\n' + str(KAMensa.key_to_name(line)) + ':')
 			for item in meal:
-				print(item.keys())
 				if 'closing_start' not in item.keys():
 					if 'nodata' not in item.keys():
 						print('|-'+ item['meal'] + ' ' + item['dish'] + ' ' + str(item['price_1']) + u'€ ' + item['info'])
